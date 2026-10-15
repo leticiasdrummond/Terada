@@ -48,25 +48,28 @@ The code, data, and models used in this study are available in this repository t
 
 ### Requirements
 - Python 3.7+
-- Libraries: NumPy, Pandas, Matplotlib, Gurobi (or any compatible MILP solver)
-- Additional packages as listed in the `requirements.txt` file
+- A working Gurobi installation and license (the optimization scripts call `SolverFactory('gurobi')`)
+- Python packages used by the scripts: `pyomo`, `numpy`, `pandas`, `matplotlib`, `seaborn`
 
 ### Installation Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/TeradaZenichi/ev-scheduler.git
-   cd ev-scheduler
+  git clone https://github.com/leticiasdrummond/Terada.git
+  cd Terada
+  ```
 
 2. Install the dependencies:
   ```bash
-  pip install -r requirements.txt
-```
-3. Configure the MILP solver (e.g., Gurobi) according to its official documentation.
-  
+  pip install pyomo numpy pandas matplotlib seaborn
+  ```
+3. Configure Gurobi according to its official documentation.
+   
 4. To run the optimization and generate the result graphs, simply execute:
 ```bash
-python linearmodel.py
+python linear_model.py
 ```
+
+5. To reproduce post-processing figures from Pareto JSON files, run the scripts in `/processing` from the repository root (for example, `python processing/a-b_time_analysis.py`).
 
 ## Contributing
 
@@ -74,7 +77,6 @@ Contributions, suggestions, and bug reports are welcome! Please open an issue or
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
-
+This repository currently does not include a license file.
 
 
